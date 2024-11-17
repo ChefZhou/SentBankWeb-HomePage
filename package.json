@@ -1,5 +1,5 @@
 {
-  "name": "your-project-name",
+  "name": "SentBankWeb-HomePage",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,7 @@
     "build": "parcel build index.html"
   },
   "keywords": [],
-  "author": "",
+  "author": "Denny Zhou",
   "license": "ISC",
   "devDependencies": {
     "parcel": "^2.0.0"
