@@ -585,6 +585,20 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"6rimH":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+//////////////////#section--1////////////////////
+var _digitalLazyJpg = require("./src/img/digital-lazy.jpg");
+var _digitalLazyJpgDefault = parcelHelpers.interopDefault(_digitalLazyJpg);
+var _digitalJpg = require("./src/img/digital.jpg");
+var _digitalJpgDefault = parcelHelpers.interopDefault(_digitalJpg);
+var _cardLazyJpg = require("./src/img/card-lazy.jpg");
+var _cardLazyJpgDefault = parcelHelpers.interopDefault(_cardLazyJpg);
+var _cardJpg = require("./src/img/card.jpg");
+var _cardJpgDefault = parcelHelpers.interopDefault(_cardJpg);
+var _growJpg = require("./src/img/grow.jpg");
+var _growJpgDefault = parcelHelpers.interopDefault(_growJpg);
+var _growLazyJpg = require("./src/img/grow-lazy.jpg");
+var _growLazyJpgDefault = parcelHelpers.interopDefault(_growLazyJpg);
 'use strict';
 // 創建帳戶//
 const modalCreateAccount = document.querySelector('#modal-create-account');
@@ -829,6 +843,102 @@ const slider = function() {
     autoLoop();
 };
 slider();
+const imgElements = document.querySelectorAll('.features__img');
+imgElements.forEach((imgElement)=>{
+    if (imgElement.classList.contains('digital-lazy')) {
+        imgElement.src = (0, _digitalLazyJpgDefault.default);
+        imgElement.dataset.src = (0, _digitalJpgDefault.default);
+    } else if (imgElement.classList.contains('card-lazy')) {
+        imgElement.src = (0, _cardLazyJpgDefault.default);
+        imgElement.dataset.src = (0, _cardJpgDefault.default);
+    } else if (imgElement.classList.contains('grow-lazy')) {
+        imgElement.src = (0, _growLazyJpgDefault.default);
+        imgElement.dataset.src = (0, _growJpgDefault.default);
+    }
+});
+
+},{"./src/img/digital-lazy.jpg":"d8uqa","./src/img/digital.jpg":"2uCka","./src/img/card-lazy.jpg":"8NH9q","./src/img/card.jpg":"fQraV","./src/img/grow.jpg":"9BnMy","./src/img/grow-lazy.jpg":"lRHLD","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"d8uqa":[function(require,module,exports,__globalThis) {
+module.exports = require("db53c81d94989834").getBundleURL('fqV6O') + "digital-lazy.3a0a1116.jpg" + "?" + Date.now();
+
+},{"db53c81d94989834":"lgJ39"}],"lgJ39":[function(require,module,exports,__globalThis) {
+"use strict";
+var bundleURL = {};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ('' + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return '/';
+}
+function getBaseURL(url) {
+    return ('' + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ('' + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
+    if (!matches) throw new Error('Origin not found');
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
+},{}],"2uCka":[function(require,module,exports,__globalThis) {
+module.exports = require("c0f5e6e2cbc70bcb").getBundleURL('fqV6O') + "digital.7e110958.jpg" + "?" + Date.now();
+
+},{"c0f5e6e2cbc70bcb":"lgJ39"}],"8NH9q":[function(require,module,exports,__globalThis) {
+module.exports = require("747c42fda50af6ae").getBundleURL('fqV6O') + "card-lazy.c12a54ac.jpg" + "?" + Date.now();
+
+},{"747c42fda50af6ae":"lgJ39"}],"fQraV":[function(require,module,exports,__globalThis) {
+module.exports = require("a1a0740f09e9c4a8").getBundleURL('fqV6O') + "card.ac8051e9.jpg" + "?" + Date.now();
+
+},{"a1a0740f09e9c4a8":"lgJ39"}],"9BnMy":[function(require,module,exports,__globalThis) {
+module.exports = require("aea0d442f525121c").getBundleURL('fqV6O') + "grow.b4cd307e.jpg" + "?" + Date.now();
+
+},{"aea0d442f525121c":"lgJ39"}],"lRHLD":[function(require,module,exports,__globalThis) {
+module.exports = require("a6ef58dd5552921a").getBundleURL('fqV6O') + "grow-lazy.0445bf30.jpg" + "?" + Date.now();
+
+},{"a6ef58dd5552921a":"lgJ39"}],"gkKU3":[function(require,module,exports,__globalThis) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, '__esModule', {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === 'default' || key === '__esModule' || Object.prototype.hasOwnProperty.call(dest, key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
 
 },{}]},["7vTeY","6rimH"], "6rimH", "parcelRequire94c2")
 

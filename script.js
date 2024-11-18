@@ -368,3 +368,25 @@ const slider = function () {
 };
 
 slider();
+//////////////////#section--1////////////////////
+import digitalLazy from './src/img/digital-lazy.jpg';
+import digital from './src/img/digital.jpg';
+import cardLazy from './src/img/card-lazy.jpg';
+import card from './src/img/card.jpg';
+import grow from './src/img/grow.jpg';
+import growLazy from './src/img/grow-lazy.jpg';
+
+const imgElements = document.querySelectorAll('.features__img');
+
+imgElements.forEach(imgElement => {
+  if (imgElement.classList.contains('digital-lazy')) {
+    imgElement.src = digitalLazy;
+    imgElement.dataset.src = digital;
+  } else if (imgElement.classList.contains('card-lazy')) {
+    imgElement.src = cardLazy;
+    imgElement.dataset.src = card;
+  } else if (imgElement.classList.contains('grow-lazy')) {
+    imgElement.src = growLazy;
+    imgElement.dataset.src = grow;
+  }
+});
